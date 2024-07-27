@@ -16,29 +16,29 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="March, 2024 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Industrial Training</h3>
+            <h4 className="vertical-timeline-element-subtitle">TechVerse Academy, Remote</h4>
             <p>
               Full-stack Web Development, GenAI/LLM, Project Management, Business Development
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="2021 - present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Undergraduate Computer Science</h3>
+            <h4 className="vertical-timeline-element-subtitle">Lead City University, Ibadan</h4>
             <p>
               Frontend Development, Backend Development, User Experience, Team Leading
             </p>
           </VerticalTimelineElement>
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2021 - 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
@@ -61,7 +61,7 @@ function Timeline() {
             <p>
               Automation, Data Governance, Statistical Analysis
             </p>
-          </VerticalTimelineElement>
+          </VerticalTimelineElement> */}
         </VerticalTimeline>
       </div>
     </div>
