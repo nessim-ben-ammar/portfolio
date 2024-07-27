@@ -59,4 +59,4 @@ Feel free to connect with me on [X](https://twitter.com/Zicoly_) or explore my w
 
 ---
 
-**Designed and built by Omojola Zion with 💜**
+<!-- **Designed and built by Omojola Zion with 💜** -->
