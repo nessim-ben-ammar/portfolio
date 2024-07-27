@@ -1,86 +1,62 @@
-# Developer Portfolio Template 🚀
+# Omojola Zion's Developer Portfolio
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+Welcome to my portfolio website! Here, you can explore my skills, career history, and personal projects.
 
-## What is this?
+## Tech Stack
 
-This simple portfolio template is designed to showcase your past projects, career history, skill sets, and more.
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 
-View the [Demo](https://yujisatojr.github.io/react-portfolio-template/).
+## Development Tools
 
-**This template is free to use, and no attribution is required.** You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-![screenshot](./src/assets//images/screenshot.png)
+## Career History
 
-## Features
+### Industrial Training
+**TechVerse Academy, Remote**
 
-✅ Open source (free to use, no attribution required)  
-✅ Responsive design & mobile-friendly  
-✅ Supports both dark and light modes  
-✅ Highly customizable multi-component layout  
-✅ Built with modern technologies (React, TypeScript, JavaScript, and SCSS)  
+- Full-stack Web Development
+- Project Management
+- Business Development
 
-## Quick Setup
+### Undergraduate Computer Science
+**Lead City University, Ibadan**
 
-1. Ensure you have [Node.js](https://nodejs.org/) installed. Check your installation by running:
+- Frontend Development
+- Backend Development
+- User Experience
+- Team Leading
 
-    ```bash
-    node -v
-    ```
+## Personal Projects
 
-2. In the project directory, install dependencies:
+I have worked on various personal projects that demonstrate my expertise in web development and software engineering. Each project has provided me with valuable experience and has contributed to my growth as a developer. Here are a few highlights:
 
-    ```bash
-    npm install
-    ```
+### To-Do List Application
+A simple and intuitive to-do list application built with HTML, CSS, and JavaScript. Features include task addition, completion tracking, filtering, and removal.
 
-3. Start the development server:
+### Portfolio Website
+This very portfolio website, created using Next.js and Tailwind CSS, showcases my skills, projects, and professional background.
 
-    ```bash
-    npm start
-    ```
+### Blogging Platform
+A comprehensive blogging platform developed with React and Node.js, featuring user authentication, post creation, and commenting functionalities.
 
-4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+### E-commerce Website
+An e-commerce platform designed with React and Redux, providing a seamless shopping experience with product listings, a shopping cart, and a checkout process.
 
-5. Customize the template by navigating to the `/src/components` directory. Modify texts, pictures, and other information as needed.
+## Contact
 
-The page will reload if you make edits, and you will see any lint errors in the console.
+Feel free to connect with me on [X](https://twitter.com/Zicoly_) or explore my work on [GitHub](https://github.com/zicoly).
 
-If you are interested in creating a mockup image like the ones from the personal projects section, I recommend [Genmoo](https://gemoo.com/tools/browser-mockup-generator/). This website lets you generate sleek looking browser mockups for free.
+---
 
-## Deployment
-
-You can choose your preferred service (e.g., [Netlify](https://www.netlify.com/), [Render](https://render.com/), [Heroku](https://www.heroku.com/)) for deployment. One of the easiest ways to host this portfolio is using GitHub Pages. Follow the instructions below for a production deploy.
-
-1. **Set Up GitHub Repository**
-
-    Create a new repository on GitHub for your portfolio app.
-
-2. **Configure `package.json`**
-
-    Edit the following properties in your `package.json` file:
-
-    ```json
-    {
-        "homepage": "https://yourusername.github.io/your-repo-name",
-        "scripts": {
-            "predeploy": "npm run build",
-            "deploy": "gh-pages -d build",
-            ...
-        }
-    }
-    ```
-
-    Replace `yourusername` with your GitHub username and `your-repo-name` with the name of your GitHub repository.
-
-3. **Deploy to GitHub Pages**
-
-    Run the following command to deploy your app:
-
-    ```bash
-    npm run deploy
-    ```
-
-4. **Access Your Deployed App**
-
-    After successfully deploying, you can access your app at `https://yourusername.github.io/your-repo-name`.
+<!-- **Designed and built by Omojola Zion with 💜** -->
