@@ -16,50 +16,50 @@ function Timeline() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: 'white', color: 'rgb(39, 40, 34)' }}
             contentArrowStyle={{ borderRight: '7px solid  white' }}
-            date="2022 - present"
+            date="present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Technology Consultant</h3>
-            <h4 className="vertical-timeline-element-subtitle">Dallas, TX</h4>
+            <h3 className="vertical-timeline-element-title">Founder & CEO</h3>
+            <h4 className="vertical-timeline-element-subtitle">Byte Track Agency</h4>
             <p>
-              Full-stack Web Development, GenAI/LLM, Project Management, Business Development
+            Byte Track: Your partner in business growth through innovative and affordable solutions.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2022"
+            date="2023 - Present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Engineer</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Computer Science Student</h3>
+            <h4 className="vertical-timeline-element-subtitle">Veltech University</h4>
             <p>
-              Frontend Development, Backend Development, User Experience, Team Leading
+            I am a computer science student at Veltech University, currently pursuing my degree in the field of technology and innovation.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2021 - 2021"
+            date="Present"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Staff Engineer Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Laie, HI</h4>
+            <h3 className="vertical-timeline-element-title">Penetration Tester</h3>
+            <h4 className="vertical-timeline-element-subtitle">at Byte Track</h4>
             <p>
-              Full-stack Development, API Development, User Experience
+            I am the Head of Penetration Testing at Byte Track, leading efforts to identify and address security vulnerabilities through comprehensive testing and analysis.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2020 - 2020"
+            date="2023"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Data Analyst Intern</h3>
-            <h4 className="vertical-timeline-element-subtitle">Tokyo, Japan</h4>
+            <h3 className="vertical-timeline-element-title">Web developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Byte Track</h4>
             <p>
-              Automation, Data Governance, Statistical Analysis
+            Specializing in creating dynamic and responsive websites to enhance user experience and functionality.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
