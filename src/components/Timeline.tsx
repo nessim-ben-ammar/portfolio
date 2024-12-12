@@ -24,7 +24,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">AI Researcher</h3>
             <h4 className="vertical-timeline-element-subtitle">Stealth Startup, Singapore</h4>
             <p>
-              Developed an AI-powered candidate recommendation platform with graph database similarity search, PII handling via Presidio, and advanced resume formatting using LLMs.
+              Developing an AI-powered candidate recommendation platform with graph database similarity search, PII handling via Presidio, and advanced resume formatting using LLMs.
             </p>
           </VerticalTimelineElement>
 
