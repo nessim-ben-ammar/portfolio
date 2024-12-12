@@ -1,9 +1,10 @@
 {
-  "name": "react-portfolio-template",
+  "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://Dhruv-NNT.github.io/react-portfolio-template",
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
@@ -19,7 +20,6 @@
     "@types/node": "^16.18.98",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "gh-pages": "^6.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -55,6 +55,7 @@
     ]
   },
   "devDependencies": {
-    "@types/react-vertical-timeline-component": "^3.3.6"
+    "@types/react-vertical-timeline-component": "^3.3.6",
+    "gh-pages": "^6.2.0"
   }
 }

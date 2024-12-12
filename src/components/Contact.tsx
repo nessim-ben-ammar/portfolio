@@ -1,13 +1,12 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser'; // Ensure this import is active
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
 
 function Contact() {
-
   const [name, setName] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [message, setMessage] = useState<string>('');
@@ -16,37 +15,35 @@ function Contact() {
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null); // Add TypeScript type
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
 
-    /* Uncomment below if you want to enable the emailJS */
+    if (name !== '' && email !== '' && message !== '') {
+      const templateParams = {
+        name,
+        email,
+        message,
+      };
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+      emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
+        (response: any) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (error: any) => {
+          console.log('FAILED...', error);
+        }
+      );
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
 
   return (
@@ -60,9 +57,10 @@ function Contact() {
             component="form"
             noValidate
             autoComplete="off"
-            className='contact-form'
+            className="contact-form"
+            onSubmit={sendEmail} // Attach the form submit handler
           >
-            <div className='form-flex'>
+            <div className="form-flex">
               <TextField
                 required
                 id="outlined-required"
@@ -73,7 +71,7 @@ function Contact() {
                   setName(e.target.value);
                 }}
                 error={nameError}
-                helperText={nameError ? "Please enter your name" : ""}
+                helperText={nameError ? 'Please enter your name' : ''}
               />
               <TextField
                 required
@@ -85,7 +83,7 @@ function Contact() {
                   setEmail(e.target.value);
                 }}
                 error={emailError}
-                helperText={emailError ? "Please enter your email or phone number" : ""}
+                helperText={emailError ? 'Please enter your email or phone number' : ''}
               />
             </div>
             <TextField
@@ -101,9 +99,9 @@ function Contact() {
                 setMessage(e.target.value);
               }}
               error={messageError}
-              helperText={messageError ? "Please enter the message" : ""}
+              helperText={messageError ? 'Please enter the message' : ''}
             />
-            <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
+            <Button variant="contained" endIcon={<SendIcon />} type="submit">
               Send
             </Button>
           </Box>
