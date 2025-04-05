@@ -1,6 +1,5 @@
-.dark-mode .about-section {
-    background-color: rgba(0, 0, 0, 0.2);
-}
+// Remove any .dark-mode styles affecting .about-section
+// Ensure no .dark-mode class is applied to parent elements
 
 .about-section {
     display: flex;
@@ -10,11 +9,17 @@
     width: 100%;
     padding: 0px 15%;
     min-height: 700px;
-    background-image: url("../images/bg-dark.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    background-image: url("../images/bg-light.png") !important; // Use the light background
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-color: white !important; // Ensure background is light
+    color: black !important; // Ensure all text is black
+}
+
+.about-section * {
+    color: black !important; // Ensure all child elements have black text
 }
 
 .about-section .content {
@@ -25,32 +30,42 @@
         display: flex;
         flex-direction: row;
         gap: 10px;
-        color: white;
+        color: black !important; // Icons in black
 
         svg {
             font-size: 1.8em;
+            color: black !important; // SVG icons in black
         }
     }
 
     .mobile_social_icons {
         display: none;
+        color: black !important; // Mobile icons also in black
+
+        svg {
+            font-size: 1.8em;
+            color: black !important; // SVG icons in black
+        }
     }
 
     p {
         font-size: 1.5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
+        color: black !important; // Paragraph text in black
     }
 
     h1 {
         font-size: 5em;
         margin-block-start: 0px;
         margin-block-end: 0px;
+        color: black !important; // Heading text in black
     }
 }
 
 .about-section .image-wrapper {
     z-index: 2;
+
     img {
         width: 150px;
         border-radius: 50%;
@@ -61,28 +76,29 @@
     text-align: center;
     padding-top: 30%;
     padding-bottom: 30%;
+    color: black !important; // Ensure any other paragraphs are black
 }
 
 @media screen {
     @media (max-width: 567px) {
-        .nav-left{
+        .nav-left {
             padding-top: 20px;
-            float:left;
+            float: left;
         }
 
         .nav-left img {
-            height: 35px
+            height: 35px;
         }
 
         .nav-right {
-            float:right;
+            float: right;
         }
 
         .nav-right li {
             padding: 10px 15px;
-            list-style:none;
-            font-size:13px;
-            color:white;
+            list-style: none;
+            font-size: 13px;
+            color: black !important; // Nav text in black
             width: 10%;
         }
 
@@ -94,23 +110,28 @@
 
         body {
             width: 100%;
+            background-color: white !important; // Ensure body background is light
+            color: black !important; // Ensure body text is black
         }
 
         .about {
             padding-left: 5%;
             padding-right: 5%;
             font-size: 12px;
+            color: black !important; // Ensure about text is black
         }
     }
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
         .about-section h1 {
             font-size: 4em !important;
             text-align: left;
+            color: black !important; // Heading text in black
         }
 
         .about-section p {
             text-align: left;
+            color: black !important; // Paragraph text in black
         }
 
         .container {
@@ -126,10 +147,11 @@
             display: flex !important;
             flex-direction: row;
             gap: 10px;
-            color: white;
-    
+            color: black !important; // Mobile icons in black
+
             svg {
                 font-size: 1.8em;
+                color: black !important; // SVG icons in black
             }
         }
 
@@ -138,6 +160,7 @@
             display: block;
             padding-left: 0px;
             padding-right: 0px;
+            background-color: white !important; // Ensure background is light
         }
 
         .about-section .content {
@@ -145,6 +168,7 @@
             padding-left: 5%;
             padding-right: 5%;
             padding-bottom: 5%;
+            color: black !important; // Ensure content text is black
         }
 
         .about-section .image-wrapper {
