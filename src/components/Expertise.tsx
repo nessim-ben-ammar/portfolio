@@ -49,10 +49,9 @@ function Expertise() {
             <div className="skills-grid">
                 <div className="skill">
                     <FontAwesomeIcon icon={faReact} size="3x"/>
-                    <h3>Full Stack Web Development</h3>
-                    <p>I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.</p>
+                    <h3>Cloud Architecture</h3>
+                    <p>I build scalable, fault-tolerant cloud systems using container-based and serverless patterns. My designs balance cost, performance, and reliability, and are fully managed with Terraform and infrastructure-as-code.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
                         {labelsFirst.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
@@ -61,10 +60,9 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faDocker} size="3x"/>
-                    <h3>DevOps & Automation</h3>
-                    <p>Once the application is built, I help clients set up DevOps testing, CI/CD pipelines, and deployment automation to support the successful Go-Live.</p>
+                    <h3>Cloud Security</h3>
+                    <p>I apply security best practices across cloud environments, including encryption, network isolation, and access control. I use policy-as-code to enforce guardrails and ensure infrastructure is secure by design and verifiable.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
                         {labelsSecond.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
@@ -73,10 +71,9 @@ function Expertise() {
 
                 <div className="skill">
                     <FontAwesomeIcon icon={faPython} size="3x"/>
-                    <h3>GenAI & LLM</h3>
-                    <p>Stay relevant in the market by leveraging the latest AI models in your projects. I have professional experience building enterprise grade GenAI-enabled solutions to empower intelligent decision making.</p>
+                    <h3>Compliance & Governance</h3>
+                    <p>I support organizations in building and maintaining security programs aligned with ISO 27001 and industry best practices. My work includes process modeling, risk management, internal audits, and designing ISMS foundations.</p>
                     <div className="flex-chips">
-                        <span className="chip-title">Tech stack:</span>
                         {labelsThird.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
                         ))}
