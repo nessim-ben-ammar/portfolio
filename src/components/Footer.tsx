@@ -4,6 +4,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Footer.scss";
 
 function Footer() {
+  const handleLegalClick = () => {
+    sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+  };
   return (
     <footer>
       <div>
@@ -24,7 +27,9 @@ function Footer() {
       </div>
       <p>
         © {new Date().getFullYear()} Nessim Ben Ammar -{" "}
-        <Link to="/legal-notice">Legal Notice</Link>
+        <Link to="/legal-notice" onClick={handleLegalClick}>
+          Legal Notice
+        </Link>
       </p>
     </footer>
   );

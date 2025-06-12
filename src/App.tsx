@@ -25,11 +25,19 @@ function App() {
   };
 
   useEffect(() => {
-    if (location.pathname === "/" && location.hash) {
-      const id = location.hash.replace("#", "");
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname === "/") {
+      if (location.hash) {
+        const id = location.hash.replace("#", "");
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        const savedPosition = sessionStorage.getItem("scrollPosition");
+        if (savedPosition) {
+          window.scrollTo({ top: parseInt(savedPosition, 10), left: 0 });
+          sessionStorage.removeItem("scrollPosition");
+        }
       }
     }
   }, [location]);
