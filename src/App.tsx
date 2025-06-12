@@ -14,9 +14,9 @@ import "./index.scss";
 
 function App() {
   const [mode, setMode] = useState<string>("dark");
-  const [savedScrollPosition, setSavedScrollPosition] = useState<number | null>(
-    null
-  );
+  const [savedScrollPosition, setSavedScrollPosition] =
+    useState<number | null>(null);
+  const [shouldFadeIn, setShouldFadeIn] = useState<boolean>(true);
   const location = useLocation();
 
   const handleModeChange = () => {
@@ -39,19 +39,23 @@ function App() {
         const savedPosition = sessionStorage.getItem("scrollPosition");
         if (savedPosition) {
           const pos = parseInt(savedPosition, 10);
-          window.scrollTo({ top: pos, left: 0 });
-          setSavedScrollPosition(pos);
+          if (shouldFadeIn) {
+            setSavedScrollPosition(pos);
+          } else {
+            window.scrollTo({ top: pos, left: 0, behavior: "smooth" });
+          }
           sessionStorage.removeItem("scrollPosition");
         }
       }
     }
-  }, [location]);
+  }, [location, shouldFadeIn]);
 
   const handleFadeInComplete = () => {
     if (savedScrollPosition !== null) {
       window.scrollTo({ top: savedScrollPosition, left: 0 });
       setSavedScrollPosition(null);
     }
+    setShouldFadeIn(false);
   };
 
   return (
@@ -60,13 +64,23 @@ function App() {
         path="/"
         element={
           <PageLayout mode={mode} handleModeChange={handleModeChange}>
-            <FadeIn transitionDuration={700} onComplete={handleFadeInComplete}>
-              <Main />
-              <Expertise />
-              <Experience />
-              <Portfolio />
-              <Contact />
-            </FadeIn>
+            {shouldFadeIn ? (
+              <FadeIn transitionDuration={700} onComplete={handleFadeInComplete}>
+                <Main />
+                <Expertise />
+                <Experience />
+                <Portfolio />
+                <Contact />
+              </FadeIn>
+            ) : (
+              <>
+                <Main />
+                <Expertise />
+                <Experience />
+                <Portfolio />
+                <Contact />
+              </>
+            )}
           </PageLayout>
         }
       />
