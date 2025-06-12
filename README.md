@@ -61,3 +61,6 @@ One of the easiest ways to host this portfolio is using GitHub Pages. Follow the
 4. **Access Your Deployed App**
 
     After successfully deploying, you can access your app at `https://yourusername.github.io/your-repo-name`.
+
+## Credits
+Many thanks to [@yujisatojr](https://github.com/yujisatojr) for [react-portfolio-template](https://github.com/yujisatojr/react-portfolio-template)
