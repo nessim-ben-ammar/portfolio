@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useLocation, Routes, Route } from "react-router-dom";
 import {
-  Main,
-  Timeline,
-  Expertise,
-  Project,
   Contact,
-  Navigation,
-  Footer,
+  Experience,
+  Expertise,
+  FadeIn,
+  Main,
+  PageLayout,
+  Portfolio,
 } from "./components";
-import LegalNotice from "./pages/legal-notice";
-import FadeIn from "./components/FadeIn";
+import { Legal, Project } from "./pages";
 import "./index.scss";
 
 function App() {
   const [mode, setMode] = useState<string>("dark");
+  const location = useLocation();
 
   const handleModeChange = () => {
     if (mode === "dark") {
@@ -25,43 +25,40 @@ function App() {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
+    if (location.pathname === "/" && location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
-    <Router basename="/portfolio">
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div
-              className={`main-container ${
-                mode === "dark" ? "dark-mode" : "light-mode"
-              }`}
-            >
-              <Navigation
-                parentToChild={{ mode }}
-                modeChange={handleModeChange}
-              />
-              <FadeIn transitionDuration={700}>
-                <Main />
-                <Expertise />
-                <Timeline />
-                <Project />
-                <Contact />
-              </FadeIn>
-              <Footer />
-            </div>
-          }
-        />
-        <Route
-          path="/legal-notice"
-          element={
-            <LegalNotice mode={mode} handleModeChange={handleModeChange} />
-          }
-        />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <PageLayout mode={mode} handleModeChange={handleModeChange}>
+            <FadeIn transitionDuration={700}>
+              <Main />
+              <Expertise />
+              <Experience />
+              <Portfolio />
+              <Contact />
+            </FadeIn>
+          </PageLayout>
+        }
+      />
+      <Route
+        path="/:projectId"
+        element={<Project mode={mode} handleModeChange={handleModeChange} />}
+      />
+      <Route
+        path="/legal-notice"
+        element={<Legal mode={mode} handleModeChange={handleModeChange} />}
+      />
+    </Routes>
   );
 }
 
