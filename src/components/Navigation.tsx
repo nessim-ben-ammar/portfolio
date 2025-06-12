@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -27,6 +27,7 @@ const navItems = [
 
 function Navigation({ parentToChild, modeChange, isSubPage }: any) {
   const { mode } = parentToChild;
+  const navigate = useNavigate();
 
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [scrolled, setScrolled] = useState<boolean>(false);
@@ -52,13 +53,18 @@ function Navigation({ parentToChild, modeChange, isSubPage }: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    console.log(section);
     const expertiseElement = document.getElementById(section);
     if (expertiseElement) {
       expertiseElement.scrollIntoView({ behavior: "smooth" });
-      console.log("Scrolling to:", expertiseElement); // Debugging: Ensure the element is found
+    }
+  };
+
+  const handleNavClick = (section: string) => {
+    if (isSubPage) {
+      sessionStorage.setItem("scrollTarget", section);
+      navigate("/");
     } else {
-      console.error('Element with id "expertise" not found'); // Debugging: Log error if element is not found
+      scrollToSection(section);
     }
   };
 
@@ -78,7 +84,7 @@ function Navigation({ parentToChild, modeChange, isSubPage }: any) {
           <ListItem key={item[0]} disablePadding>
             <ListItemButton
               sx={{ textAlign: "center" }}
-              onClick={() => scrollToSection(item[1])}
+              onClick={() => handleNavClick(item[1])}
             >
               <ListItemText primary={item[0]} />
             </ListItemButton>
@@ -112,26 +118,15 @@ function Navigation({ parentToChild, modeChange, isSubPage }: any) {
             <DarkModeIcon onClick={() => modeChange()} />
           )}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) =>
-              isSubPage ? (
-                <Button
-                  key={item[0]}
-                  component={Link}
-                  to={`/#${item[1]}`}
-                  sx={{ color: "#fff" }}
-                >
-                  {item[0]}
-                </Button>
-              ) : (
-                <Button
-                  key={item[0]}
-                  onClick={() => scrollToSection(item[1])}
-                  sx={{ color: "#fff" }}
-                >
-                  {item[0]}
-                </Button>
-              )
-            )}
+            {navItems.map((item) => (
+              <Button
+                key={item[0]}
+                onClick={() => handleNavClick(item[1])}
+                sx={{ color: "#fff" }}
+              >
+                {item[0]}
+              </Button>
+            ))}
           </Box>
         </Toolbar>
       </AppBar>

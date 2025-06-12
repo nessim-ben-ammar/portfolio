@@ -29,7 +29,14 @@ function App() {
 
   useEffect(() => {
     if (location.pathname === "/") {
-      if (location.hash) {
+      const target = sessionStorage.getItem("scrollTarget");
+      if (target) {
+        const el = document.getElementById(target);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+        sessionStorage.removeItem("scrollTarget");
+      } else if (location.hash) {
         const id = location.hash.replace("#", "");
         const el = document.getElementById(id);
         if (el) {
