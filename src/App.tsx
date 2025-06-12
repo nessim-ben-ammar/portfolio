@@ -14,8 +14,9 @@ import "./index.scss";
 
 function App() {
   const [mode, setMode] = useState<string>("dark");
-  const [savedScrollPosition, setSavedScrollPosition] =
-    useState<number | null>(null);
+  const [savedScrollPosition, setSavedScrollPosition] = useState<number | null>(
+    null
+  );
   const [shouldFadeIn, setShouldFadeIn] = useState<boolean>(true);
   const location = useLocation();
 
@@ -59,7 +60,11 @@ function App() {
 
   const handleFadeInComplete = () => {
     if (savedScrollPosition !== null) {
-      window.scrollTo({ top: savedScrollPosition, left: 0 });
+      window.scrollTo({
+        top: savedScrollPosition,
+        left: 0,
+        behavior: "smooth",
+      });
       setSavedScrollPosition(null);
     }
     setShouldFadeIn(false);
@@ -72,7 +77,10 @@ function App() {
         element={
           <PageLayout mode={mode} handleModeChange={handleModeChange}>
             {shouldFadeIn ? (
-              <FadeIn transitionDuration={700} onComplete={handleFadeInComplete}>
+              <FadeIn
+                transitionDuration={700}
+                onComplete={handleFadeInComplete}
+              >
                 <Main />
                 <Expertise />
                 <Experience />
