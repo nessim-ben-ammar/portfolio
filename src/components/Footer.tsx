@@ -1,12 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import "../assets/styles/Footer.scss";
 
 function Footer() {
-  const handleLegalClick = () => {
-    sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+  const location = useLocation();
+  const handleLegalClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (location.pathname === "/legal-notice") {
+      e.preventDefault();
+    } else {
+      sessionStorage.setItem("scrollPosition", window.scrollY.toString());
+    }
   };
+
   return (
     <footer>
       <div>
