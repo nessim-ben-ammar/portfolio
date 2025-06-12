@@ -14,6 +14,9 @@ import "./index.scss";
 
 function App() {
   const [mode, setMode] = useState<string>("dark");
+  const [savedScrollPosition, setSavedScrollPosition] = useState<number | null>(
+    null
+  );
   const location = useLocation();
 
   const handleModeChange = () => {
@@ -35,12 +38,21 @@ function App() {
       } else {
         const savedPosition = sessionStorage.getItem("scrollPosition");
         if (savedPosition) {
-          window.scrollTo({ top: parseInt(savedPosition, 10), left: 0 });
+          const pos = parseInt(savedPosition, 10);
+          window.scrollTo({ top: pos, left: 0 });
+          setSavedScrollPosition(pos);
           sessionStorage.removeItem("scrollPosition");
         }
       }
     }
   }, [location]);
+
+  const handleFadeInComplete = () => {
+    if (savedScrollPosition !== null) {
+      window.scrollTo({ top: savedScrollPosition, left: 0 });
+      setSavedScrollPosition(null);
+    }
+  };
 
   return (
     <Routes>
@@ -48,7 +60,7 @@ function App() {
         path="/"
         element={
           <PageLayout mode={mode} handleModeChange={handleModeChange}>
-            <FadeIn transitionDuration={700}>
+            <FadeIn transitionDuration={700} onComplete={handleFadeInComplete}>
               <Main />
               <Expertise />
               <Experience />
