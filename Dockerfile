@@ -8,7 +8,7 @@ WORKDIR /app
 RUN apt-get update && \
     apt-get install -y git && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*\
+    rm -rf /var/lib/apt/lists/* &&\
     git config --global user.name "Nessim Ben Ammar" && \
     git config --global user.email "nessim.benammar@gmail.com"
 
