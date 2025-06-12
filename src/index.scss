@@ -50,6 +50,12 @@ p, a, h1, h2, h3, h4, h5, label, button {
   }
 }
 
+.navigation-bar button:hover {
+  color: #5000ca;
+  background-color: lighten(#0d1116, 5%);
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+}
+
 .navigation-bar-responsive {
   span, p {
     color: #0d1116;
