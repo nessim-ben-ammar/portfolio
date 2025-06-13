@@ -8,12 +8,7 @@ type PageLayoutProps = {
   children: React.ReactNode;
 };
 
-function PageLayout({
-  mode,
-  handleModeChange,
-  isSubPage,
-  children,
-}: PageLayoutProps) {
+function PageLayout({ mode, handleModeChange, isSubPage, children }: PageLayoutProps) {
   return (
     <div
       className={`main-container ${
@@ -21,11 +16,7 @@ function PageLayout({
       }`}
       style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
     >
-      <Navigation
-        parentToChild={{ mode }}
-        modeChange={handleModeChange}
-        isSubPage={isSubPage}
-      />
+      <Navigation parentToChild={{ mode }} modeChange={handleModeChange} isSubPage={isSubPage} />
       <div style={{ flex: 1 }}>{children}</div>
       <Footer />
     </div>

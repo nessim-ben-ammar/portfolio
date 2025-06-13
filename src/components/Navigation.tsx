@@ -53,9 +53,9 @@ function Navigation({ parentToChild, modeChange, isSubPage }: any) {
   }, []);
 
   const scrollToSection = (section: string) => {
-    const expertiseElement = document.getElementById(section);
-    if (expertiseElement) {
-      expertiseElement.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 

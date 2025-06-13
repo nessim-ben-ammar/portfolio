@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Routes, Route } from "react-router-dom";
+import { useLocation, Routes, Route, useNavigationType } from "react-router-dom";
 import {
   Contact,
   Experience,
@@ -19,6 +19,7 @@ function App() {
   );
   const [shouldFadeIn, setShouldFadeIn] = useState<boolean>(true);
   const location = useLocation();
+  const navigationType = useNavigationType();
 
   const handleModeChange = () => {
     if (mode === "dark") {
@@ -29,6 +30,7 @@ function App() {
   };
 
   useEffect(() => {
+    if (navigationType === "POP") return;
     if (location.pathname === "/") {
       const target = sessionStorage.getItem("scrollTarget");
       if (target) {
@@ -56,7 +58,7 @@ function App() {
         }
       }
     }
-  }, [location, shouldFadeIn]);
+  }, [location, shouldFadeIn, navigationType]);
 
   const handleFadeInComplete = () => {
     if (savedScrollPosition !== null) {
