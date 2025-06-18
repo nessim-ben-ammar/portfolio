@@ -9,7 +9,9 @@
     align-items: center;
     width: 100%;
     padding: 0px 15%;
-    min-height: 700px;
+    // Ensure hero section fills the viewport below the fixed navigation bar
+    // 64px matches the AppBar height defined by Material UI
+    min-height: calc(100vh - 64px);
     background-image: url("../images/bg-dark.png");
     background-repeat: no-repeat;
     background-size: cover;
