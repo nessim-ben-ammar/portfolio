@@ -23,15 +23,18 @@ function Experience() {
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">
-              Serverless TRNG API
+              Cloud Rand – Serverless TRNG API
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
               Remote, Germany
             </h4>
             <p>
-              Built a serverless API on AWS to generate and verify true random
-              numbers using Cloud HSM and DynamoDB. Managed entirely with
-              Terraform and designed for high availability and integrity.
+              Designed and built a serverless API on AWS to generate and verify
+              cryptographically secure random numbers using AWS KMS, DynamoDB,
+              and API Gateway. The system is managed entirely with Terraform and
+              architected for scalability, auditability, and compliance.
+              Security measures include WAF, Shield, and optional CloudFront +
+              Lambda@Edge for edge-layer request filtering.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
