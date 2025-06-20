@@ -9,7 +9,7 @@ import {
   PageLayout,
   Portfolio,
 } from "./components";
-import { Legal, Project } from "./pages";
+import { Legal, Project, NotFound } from "./pages";
 import "./index.scss";
 
 function App() {
@@ -106,6 +106,10 @@ function App() {
       <Route
         path="/legal-notice"
         element={<Legal mode={mode} handleModeChange={handleModeChange} />}
+      />
+      <Route
+        path="*"
+        element={<NotFound mode={mode} handleModeChange={handleModeChange} />}
       />
     </Routes>
   );
