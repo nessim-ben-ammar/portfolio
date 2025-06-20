@@ -22,6 +22,13 @@ function Project({ mode, handleModeChange }: ProjectProps) {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
 
+  const { projectId } = useParams();
+  const project = projects.find((p) => p.id === projectId);
+
+  if (!project) {
+    return <NotFound mode={mode} handleModeChange={handleModeChange} />;
+  }
+
   return (
     <PageLayout mode={mode} handleModeChange={handleModeChange} isSubPage>
       <div className="project-page-header">
