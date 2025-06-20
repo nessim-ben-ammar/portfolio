@@ -19,6 +19,7 @@ import Toolbar from "@mui/material/Toolbar";
 
 const drawerWidth = 240;
 const navItems = [
+  ["Home", "home"],
   ["Expertise", "expertise"],
   ["Experience", "experience"],
   ["Portfolio", "portfolio"],
@@ -60,6 +61,15 @@ function Navigation({ parentToChild, modeChange, isSubPage }: any) {
   };
 
   const handleNavClick = (section: string) => {
+    if (section === "home") {
+      if (isSubPage) {
+        navigate("/");
+      } else {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      }
+      return;
+    }
+
     if (isSubPage) {
       sessionStorage.setItem("scrollTarget", section);
       navigate("/");
