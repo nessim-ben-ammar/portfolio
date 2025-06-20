@@ -13,17 +13,9 @@ type ProjectProps = {
 function Project({ mode, handleModeChange }: ProjectProps) {
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === projectId);
-
-  if (!project) {
-    return <NotFound mode={mode} handleModeChange={handleModeChange} />;
-  }
-
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-
-  const { projectId } = useParams();
-  const project = projects.find((p) => p.id === projectId);
 
   if (!project) {
     return <NotFound mode={mode} handleModeChange={handleModeChange} />;
