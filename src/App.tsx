@@ -100,7 +100,7 @@ function App() {
         }
       />
       <Route
-        path="/:projectId"
+        path="/project/:projectId"
         element={<Project mode={mode} handleModeChange={handleModeChange} />}
       />
       <Route

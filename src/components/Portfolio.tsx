@@ -12,7 +12,7 @@ function Portfolio() {
       <div className="projects-grid">
         {projects.map((project) => (
           <div className="project" key={project.id}>
-            <Link to={`/${project.id}`} onClick={handleProjectClick}>
+            <Link to={`/project/${project.id}`} onClick={handleProjectClick}>
               <img
                 src={project.image}
                 className="zoom"
@@ -20,7 +20,7 @@ function Portfolio() {
                 width="100%"
               />
             </Link>
-            <Link to={`/${project.id}`} onClick={handleProjectClick}>
+            <Link to={`/project/${project.id}`} onClick={handleProjectClick}>
               <h2>{project.title}</h2>
             </Link>
             <p>{project.description}</p>
