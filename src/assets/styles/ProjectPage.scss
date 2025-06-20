@@ -1,0 +1,25 @@
+.project-page-header {
+  padding: 2rem;
+  padding-top: 5rem;
+  text-align: center;
+
+  img {
+    max-width: 60%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.project-page-content {
+  max-width: 60%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media screen {
+  @media (max-width: 700px) {
+    .project-page-header img,
+    .project-page-content {
+      max-width: 90%;
+    }
+  }
+}

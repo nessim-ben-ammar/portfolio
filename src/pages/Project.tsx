@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../data/projectData";
 import { PageLayout } from "../components";
+import "../assets/styles/ProjectPage.scss";
 
 type ProjectProps = {
   mode: string;
@@ -20,15 +21,11 @@ function Project({ mode, handleModeChange }: ProjectProps) {
 
   return (
     <PageLayout mode={mode} handleModeChange={handleModeChange} isSubPage>
-      <div style={{ padding: "2rem", paddingTop: "5rem", textAlign: "center" }}>
+      <div className="project-page-header">
         <h1>{project.title}</h1>
-        <img
-          src={project.image}
-          alt={project.title}
-          style={{ maxWidth: "60%", marginBottom: "1.5rem" }}
-        />
+        <img src={project.image} alt={project.title} />
       </div>
-      <div style={{ maxWidth: "60%", margin: "0 auto", textAlign: "justify" }}>
+      <div className="project-page-content">
         <p>{project.description}</p>
         {project.body && <div>{project.body}</div>}
       </div>
