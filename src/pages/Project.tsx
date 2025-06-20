@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../data/projectData";
 import { PageLayout } from "../components";
+import NotFound from "./NotFound";
 import "../assets/styles/ProjectPage.scss";
 
 type ProjectProps = {
@@ -10,14 +11,16 @@ type ProjectProps = {
 };
 
 function Project({ mode, handleModeChange }: ProjectProps) {
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-  }, []);
-
   const { projectId } = useParams();
   const project = projects.find((p) => p.id === projectId);
 
-  if (!project) return <div style={{ padding: "2rem" }}>Project not found</div>;
+  if (!project) {
+    return <NotFound mode={mode} handleModeChange={handleModeChange} />;
+  }
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <PageLayout mode={mode} handleModeChange={handleModeChange} isSubPage>
