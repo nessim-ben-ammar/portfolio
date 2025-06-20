@@ -1,6 +1,6 @@
-import '@fortawesome/free-regular-svg-icons'
+import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCloud, faShieldAlt, faScaleBalanced} from '@fortawesome/free-solid-svg-icons';
+import { faCloud, faShieldAlt, faScaleBalanced } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Expertise.scss';
 
@@ -40,6 +40,46 @@ const labelsThird = [
     "Process Modeling",
 ];
 
+interface Badge {
+    src: string;
+    link: string;
+    alt: string;
+}
+
+const badgesFirst: Badge[] = [
+    {
+        src: process.env.PUBLIC_URL + '/badge_awssa.png',
+        link: 'https://www.credly.com/badges/awssa',
+        alt: 'AWS Solutions Architect',
+    },
+    {
+        src: process.env.PUBLIC_URL + '/badge_tf.png',
+        link: 'https://www.credly.com/badges/terraform',
+        alt: 'Terraform Associate',
+    },
+];
+
+const badgesSecond: Badge[] = [
+    {
+        src: process.env.PUBLIC_URL + '/badge_gcpcs.png',
+        link: 'https://www.credly.com/badges/gcpcs',
+        alt: 'Google Cloud Security Engineer',
+    },
+];
+
+const badgesThird: Badge[] = [
+    {
+        src: process.env.PUBLIC_URL + '/badge_secoff.png',
+        link: 'https://www.credly.com/badges/secoff',
+        alt: 'Security Officer',
+    },
+    {
+        src: process.env.PUBLIC_URL + '/badge_secaudit.png',
+        link: 'https://www.credly.com/badges/secaudit',
+        alt: 'Security Auditor',
+    },
+];
+
 function Expertise() {
     return (
     <div className="container" id="expertise">
@@ -55,6 +95,13 @@ function Expertise() {
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
+                    <div className="badges">
+                        {badgesFirst.map((badge, index) => (
+                            <a key={index} href={badge.link} target="_blank" rel="noreferrer">
+                                <img className="badge" src={badge.src} alt={badge.alt} />
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="skill">
@@ -66,6 +113,13 @@ function Expertise() {
                             <Chip key={index} className='chip' label={label} />
                         ))}
                     </div>
+                    <div className="badges">
+                        {badgesSecond.map((badge, index) => (
+                            <a key={index} href={badge.link} target="_blank" rel="noreferrer">
+                                <img className="badge" src={badge.src} alt={badge.alt} />
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 <div className="skill">
@@ -75,6 +129,13 @@ function Expertise() {
                     <div className="flex-chips">
                         {labelsThird.map((label, index) => (
                             <Chip key={index} className='chip' label={label} />
+                        ))}
+                    </div>
+                    <div className="badges">
+                        {badgesThird.map((badge, index) => (
+                            <a key={index} href={badge.link} target="_blank" rel="noreferrer">
+                                <img className="badge" src={badge.src} alt={badge.alt} />
+                            </a>
                         ))}
                     </div>
                 </div>
