@@ -20,13 +20,15 @@ function Project({ mode, handleModeChange }: ProjectProps) {
 
   return (
     <PageLayout mode={mode} handleModeChange={handleModeChange} isSubPage>
-      <div style={{ padding: "2rem", paddingTop: "5rem" }}>
+      <div style={{ padding: "2rem", paddingTop: "5rem", textAlign: "center" }}>
         <h1>{project.title}</h1>
         <img
           src={project.image}
           alt={project.title}
-          style={{ maxWidth: "100%", marginBottom: "1.5rem" }}
+          style={{ maxWidth: "60%", marginBottom: "1.5rem" }}
         />
+      </div>
+      <div style={{ maxWidth: "60%", margin: "0 auto", textAlign: "justify" }}>
         <p>{project.description}</p>
         {project.body && <div>{project.body}</div>}
       </div>
