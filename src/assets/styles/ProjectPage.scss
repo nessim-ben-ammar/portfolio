@@ -16,10 +16,13 @@
 }
 
 @media screen {
-  @media (max-width: 700px) {
-    .project-page-header img,
+  @media (max-width: 768px) {
+    .project-page-header img {
+      max-width: 100%;
+    }
     .project-page-content {
       max-width: 90%;
+      text-align: left;
     }
   }
 }
