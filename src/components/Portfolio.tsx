@@ -13,12 +13,13 @@ function Portfolio() {
         {projects.map((project) => (
           <div className="project" key={project.id}>
             <Link to={`/project/${project.id}`} onClick={handleProjectClick}>
-              <img
-                src={project.image}
-                className="zoom"
-                alt="thumbnail"
-                width="100%"
-              />
+              <div className="project-image-container">
+                <img
+                  src={project.image}
+                  className="zoom"
+                  alt="thumbnail"
+                />
+              </div>
             </Link>
             <Link to={`/project/${project.id}`} onClick={handleProjectClick}>
               <h2>{project.title}</h2>
