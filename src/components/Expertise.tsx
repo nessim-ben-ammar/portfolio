@@ -11,26 +11,27 @@ import "../assets/styles/Expertise.scss";
 const labelsFirst = [
   "Multi-Cloud",
   "Hybrid Cloud",
-  "IaC",
-  "Scalability",
-  "Microservices",
-  "HPC",
   "Containers",
+  "Microservices",
   "Serverless",
-
+  "Event-Driven",
+  "SQS/SNS",
+  "IaC",
   "Terraform",
+  "CI/CD",
 ];
 
 const labelsSecond = [
   "IAM",
   "PaC",
-  "NAC",
-  "Segmentation",
-  "TLS",
-  "Crypto",
+  "GuardDuty",
+  "Security Hub",
+  "CloudTrail",
+  "AWS Config",
+  "Secrets Manager",
+  "KMS",
   "WAF",
   "DDoS",
-  "OWASP",
   "Zero Trust",
 ];
 
@@ -54,6 +55,21 @@ const badgesFirst: Badge[] = [
     src: process.env.PUBLIC_URL + "/b_awssa.png",
     link: "https://www.credly.com/badges/2963c7ad-f521-4ba2-891d-68512ba6a9c6/public_url",
     alt: "AWS Solutions Architect",
+  },
+  {
+    src: process.env.PUBLIC_URL + "/b_awscops.png",
+    link: "https://www.credly.com/earner/earned/badge/d603f6e2-9dab-4036-88c8-dc65af55b56d",
+    alt: "AWS CloudOps Engineer",
+  },
+  {
+    src: process.env.PUBLIC_URL + "/b_awsdev.png",
+    link: "https://www.credly.com/earner/earned/badge/a6413f16-725b-4cc8-b5e5-7661580398ac",
+    alt: "AWS Developer",
+  },
+  {
+    src: process.env.PUBLIC_URL + "/b_awssec.png",
+    link: "https://www.credly.com/earner/earned/badge/8d820243-c4f3-446f-bcac-68f0f544c2a2",
+    alt: "AWS Security – Specialty",
   },
   {
     src: process.env.PUBLIC_URL + "/b_tfca.png",

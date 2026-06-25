@@ -25,7 +25,7 @@ function Contact() {
               +49 151 17693555
             </a>
             <br />
-            <a
+            {/* <a
               href="https://www.linkedin.com/in/nessim-ben-ammar/"
               target="_blank"
               rel="noreferrer"
@@ -33,7 +33,7 @@ function Contact() {
               <LinkedInIcon />
               https://www.linkedin.com/in/nessim-ben-ammar/
             </a>
-            <br />
+            <br /> */}
             <a
               href="https://github.com/nessim-ben-ammar/"
               target="_blank"

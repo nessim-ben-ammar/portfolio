@@ -18,80 +18,78 @@ function Experience() {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "white", color: "rgb(39, 40, 34)" }}
             contentArrowStyle={{ borderRight: "7px solid  white" }}
-            date="2025"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            date="2025 - Present"
+            iconStyle={{ background: "#5000ca", color: "white" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">
-              Cloud Rand – Serverless TRNG API
-            </h3>
+            <h3 className="vertical-timeline-element-title">Cloud Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Remote, Germany
+              Elco Solutions – Leinfelden-Echterdingen, Germany
             </h4>
             <p>
-              Designed and built a serverless API on AWS to generate and verify
-              cryptographically secure random numbers using AWS KMS, DynamoDB,
-              and API Gateway. The system is managed entirely with Terraform and
-              architected for scalability, auditability, and compliance.
-              Security measures include WAF, Shield, and optional CloudFront +
-              Lambda@Edge for edge-layer request filtering.
+              Maintaining and continuously optimizing the AWS cloud
+              infrastructure. Managing user permissions and access control via
+              AWS IAM. Performing systematic troubleshooting and issue
+              resolution in live operations, while monitoring system performance
+              to ensure high availability.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="2022 - 2025"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            iconStyle={{ background: "#5000ca", color: "white" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">
-              Process Management
-            </h3>
+            <h3 className="vertical-timeline-element-title">Process Manager</h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Mönsheim, Germany
+              CARIAD SE – Mönsheim, Germany
             </h4>
             <p>
-              Defined and implemented software development processes and tooling
-              to support ASPICE compliance in a large-scale automotive program.
-              Supported internal audits and audit preparation, with a focus on
-              efficiency and readiness.
+              Provided technical leadership in selecting and introducing
+              software development processes and tools. Modeled agile
+              development workflows, defined tailored security tests, and
+              integrated compliance standards. Automated CI/CD pipelines using
+              Python to boost efficiency, while ensuring audit readiness and
+              coaching developer teams.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2019 - 2022"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            date="2017 - 2022"
+            iconStyle={{ background: "#5000ca", color: "white" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">
-              Process Management
+              Software Architect & Process Manager
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Bühl, Germany
+              Robert Bosch GmbH – Stuttgart & Bühl, Germany
             </h4>
             <p>
-              Developed and rolled out software engineering processes and tools
-              across multiple embedded platforms. Focused on enabling ASPICE
-              compliance and supported internal assessments to ensure audit
-              readiness and continuous improvement.
+              Defined and deployed software development processes and integrated
+              compliance standards into workflows. Conceived and introduced an
+              automated build and SiL-test framework. Designed resilient,
+              fault-tolerant software architectures and provided technical
+              leadership to global, cross-functional teams.
             </p>
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2018 - 2019"
-            iconStyle={{ background: "#5000ca", color: "rgb(39, 40, 34)" }}
+            date="2015 - 2017"
+            iconStyle={{ background: "#5000ca", color: "white" }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
             <h3 className="vertical-timeline-element-title">
-              Project Management
+              Embedded Software Engineer
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Bühl, Germany
+              Vector Informatik GmbH – Stuttgart, Germany
             </h4>
             <p>
-              Led a cross-functional team delivering embedded software for an
-              automotive control unit. Managed planning, development, and
-              integration while coordinating with customers to ensure delivery,
-              quality, and compliance.
+              Developed safety-critical real-time operating system (RTOS)
+              components up to ASIL-D compliance. Automated code generation
+              processes to maximize efficiency across complex software
+              integration projects.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

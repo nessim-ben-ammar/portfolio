@@ -16,20 +16,20 @@ function Footer() {
   return (
     <footer>
       <div>
-        <a
+        {/* <a
           href="https://github.com/nessim-ben-ammar"
           target="_blank"
           rel="noreferrer"
         >
           <GitHubIcon />
-        </a>
-        <a
+        </a> */}
+        {/* <a
           href="https://www.linkedin.com/in/nessim-ben-ammar/"
           target="_blank"
           rel="noreferrer"
         >
           <LinkedInIcon />
-        </a>
+        </a> */}
       </div>
       <p>
         © {new Date().getFullYear()} Nessim Ben Ammar -{" "}
