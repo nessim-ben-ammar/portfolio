@@ -24,7 +24,7 @@ function Experience() {
           >
             <h3 className="vertical-timeline-element-title">Cloud Engineer</h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Elco Solutions – Leinfelden-Echterdingen, Germany
+              Elco Solutions – Leinfelden-Echterdingen
             </h4>
             <p>
               Maintaining and continuously optimizing the AWS cloud
@@ -42,7 +42,7 @@ function Experience() {
           >
             <h3 className="vertical-timeline-element-title">Process Manager</h3>
             <h4 className="vertical-timeline-element-subtitle">
-              CARIAD SE – Mönsheim, Germany
+              CARIAD SE – Mönsheim
             </h4>
             <p>
               Provided technical leadership in selecting and introducing
@@ -63,7 +63,7 @@ function Experience() {
               Software Architect & Process Manager
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Robert Bosch GmbH – Stuttgart & Bühl, Germany
+              Robert Bosch GmbH – Stuttgart & Bühl
             </h4>
             <p>
               Defined and deployed software development processes and integrated
@@ -83,7 +83,7 @@ function Experience() {
               Embedded Software Engineer
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
-              Vector Informatik GmbH – Stuttgart, Germany
+              Vector Informatik GmbH – Stuttgart
             </h4>
             <p>
               Developed safety-critical real-time operating system (RTOS)
