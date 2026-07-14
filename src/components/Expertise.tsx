@@ -52,8 +52,8 @@ interface Badge {
 
 const badgesFirst: Badge[] = [
   {
-    src: process.env.PUBLIC_URL + "/b_awssa.png",
-    link: "https://www.credly.com/badges/2963c7ad-f521-4ba2-891d-68512ba6a9c6/public_url",
+    src: process.env.PUBLIC_URL + "/b_awsdevpro.png",
+    link: "https://www.credly.com/badges/83f1e39c-896e-48f9-9624-d5a84bc4697f",
     alt: "AWS Solutions Architect",
   },
   {
@@ -65,6 +65,11 @@ const badgesFirst: Badge[] = [
     src: process.env.PUBLIC_URL + "/b_awsdev.png",
     link: "https://www.credly.com/earner/earned/badge/a6413f16-725b-4cc8-b5e5-7661580398ac",
     alt: "AWS Developer",
+  },
+  {
+    src: process.env.PUBLIC_URL + "/b_awssa.png",
+    link: "https://www.credly.com/badges/2963c7ad-f521-4ba2-891d-68512ba6a9c6/public_url",
+    alt: "AWS Solutions Architect",
   },
   {
     src: process.env.PUBLIC_URL + "/b_awssec.png",
